@@ -85,14 +85,17 @@ body {
 
 #hedlinecontainer {
   display: flex;
+  flex-direction: column; /* เพิ่มบรรทัดนี้ */
   justify-content: center;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 60px;
+  text-align: center; /* จัดข้อความให้อยู่กลาง */
 }
 
-#shine {
-  font-size: 60px;
+.shine {
+  margin: 5px 0; /* เว้นระยะห่างระหว่างบรรทัด */
+  font-size: 15px;
   font-weight: bold;
   color: rgba(255, 0, 102, 0.3);
   z-index: 10;
@@ -103,7 +106,6 @@ body {
   -webkit-animation-duration: 3s; /* Adjust the duration as needed */
   -webkit-animation-iteration-count: infinite;
   text-shadow: 0 0px 0px rgba(233, 85, 189, 0.419);
-
 }
 
 @-webkit-keyframes shine {
