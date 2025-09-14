@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Happy birthday</title>
+    <style>
+      .center-container {
+        position: fixed;
+        top: 90%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+        z-index: 999; /* ให้อยู่บนสุดเหนือ canvas */
+        opacity: 0;    /* เริ่มต้นซ่อน */
+        transition: opacity 1s ease; /* ทำให้เฟดตอนแสดง */
+      }
+      .center-container.show {
+        opacity: 1; /* แสดงเมื่อมี class show */
+      }
+      .next-btn {
+        background: white;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 15px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      .next-btn:hover {
+        background: white;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Tiktok meowish -->
+    <canvas id="c"></canvas>
+    <!-- ปุ่มไปหน้าต่อไป -->
+    <div class="center-container" id="btn-container">
+      <button class="next-btn" onclick="goNext()">ลองกดดูสิ</button>
+    </div>
+
+    <script>
+      function goNext() {
+        window.location.href = "HDB.html"; // เปลี่ยนชื่อไฟล์ปลายทางตามที่คุณต้องการ
+      }
+      // ดีเลย์ 5 วินาทีแล้วโชว์ปุ่ม
+      setTimeout(() => {
+        document.getElementById("btn-container").classList.add("show");
+      }, 3000);
+    </script>
+
+    <script
+      data-name="BMC-Widget"
+      data-cfasync="false"
+      data-id="er.robin"
+      data-description="Support me on Buy me a coffee!"
+      data-message=""
+      data-color="#BD5FFF"
+      data-position="Right"
+      data-x_margin="18"
+      data-y_margin="18"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
